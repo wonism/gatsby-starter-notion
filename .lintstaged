@@ -1,0 +1,7 @@
+{
+  "*.{ts,tsx}": [
+    "eslint -c .eslintrc.js --fix",
+    "npm t",
+    "git add"
+  ]
+}

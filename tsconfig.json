@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "target": "es5",
+    "module": "commonjs",
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "jsx": "preserve",
+    "noEmit": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "src/types",
+      "node_modules/@tossteam/typings/types",
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "./public",
+    "./.cache"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

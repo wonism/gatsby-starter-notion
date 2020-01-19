@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
+import Title from '../components/Common/Title';
 
 const visuallyHidden = `
   position: absolute;
@@ -35,11 +37,22 @@ const Notion = ({
     };
   }, [title, id, origin, pathname]);
 
+  const purifiedContent = useMemo(() =>
+    content
+      ?.replace(/<\/?[^>]+(>|$)/g, '')
+      ?.slice(0, 100),
+    [content]
+  );
+
   return (
     <Layout>
-      <h1 css={visuallyHidden}>
-        {title}
-      </h1>
+      <Title title={title} css={visuallyHidden} />
+      {purifiedContent != null ? (
+        <Helmet>
+          <meta name="description" content={purifiedContent} />
+          <meta property="og:description" content={purifiedContent} />
+        </Helmet>
+      ) : null}
       <div dangerouslySetInnerHTML={{ __html: content }} />
       <div id="disqus_thread" />
       <noscript>

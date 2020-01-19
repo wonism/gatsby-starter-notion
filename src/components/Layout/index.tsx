@@ -1,5 +1,7 @@
-import React, { useEffect, Children, cloneElement } from 'react';
+import React, { Children, cloneElement } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import GithubCorner from 'react-github-corners';
+import 'react-github-corners/dist/GithubCorner.css';
 
 import Nav from './Nav';
 import Footer from './Footer';
@@ -37,21 +39,14 @@ const Layout = ({ children, main = false }: Props) => {
     }
   );
 
-  useEffect(() => {
-    const d = document;
-
-    if (!d.getElementById('disqus-sdk')) {
-      const s = d.createElement('script');
-
-      s.src = 'https://jaewonism.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', Date.now());
-      d.body.appendChild(s);
-    }
-  }, []);
-
   return (
     <>
       <GlobalStyle />
+      <GithubCorner
+        url="https://github.com/wonism/gatsby-starter-notion"
+        backgroundColor="orange"
+        target="_blank"
+      />
       <div
         css={`
           margin: 0 auto;

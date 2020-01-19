@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 const title = 'Gatsby Starter Notion';
 const author = '@wonism';
-const description = 'Gatsby starter for notion';
 const keywords = [
   'Gatsby',
   'Notion',
@@ -38,13 +37,10 @@ export default class HTML extends Component<any> {
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
           />
-          <meta name="description" content={description} />
           <meta name="keywords" content={keywords} />
           <meta name="author" content={author} />
-          <meta property="og:title" content={title} />
           <meta property="og:site_name" content={title} />
           <meta property="og:type" content="website" />
-          <meta property="og:description" content={description} />
           <meta property="og:locale" content="ko_KR" />
         </head>
         <body {...bodyAttributes} className="hidden">

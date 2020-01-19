@@ -8,6 +8,12 @@ const reset = css`
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  .GithubCorner {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+  }
+
   a {
     text-decoration: none;
   }

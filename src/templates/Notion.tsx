@@ -53,7 +53,7 @@ const Notion = ({
           <meta property="og:description" content={purifiedContent} />
         </Helmet>
       ) : null}
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div css="overflow-x: hidden;" dangerouslySetInnerHTML={{ __html: content }} />
       <div id="disqus_thread" />
       <noscript>
         Please enable JavaScript to view the

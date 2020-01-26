@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-notion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gatsby starter for notion",
   "main": "index.js",
   "scripts": {
